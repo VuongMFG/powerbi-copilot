@@ -2,52 +2,159 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Conversion Cost Analysis Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>
+        Conversion Cost Analysis AI Dashboard
+    </title>
 
-*{
-    box-sizing:border-box;
-}
+    <style>
 
-html,
-body{
-    margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-.powerbi{
-    width:100vw;
-    height:100vh;
-}
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-iframe{
-    width:100%;
-    height:100%;
-    border:none;
-    display:block;
-}
 
-</style>
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        /* ======================
+           POWER BI SECTION
+        ====================== */
+
+        .powerbi {
+            width: 72%;
+            height: 100%;
+            border-right: 1px solid #ddd;
+        }
+
+
+        /* ======================
+           COPILOT SECTION
+        ====================== */
+
+        .copilot {
+            width: 28%;
+            height: 100%;
+        }
+
+
+        iframe {
+
+            width: 100%;
+            height: 100%;
+
+            border: none;
+
+            display: block;
+        }
+
+
+
+        /* ======================
+           MOBILE RESPONSIVE
+        ====================== */
+
+        @media screen and (max-width: 900px) {
+
+
+            .container {
+
+                flex-direction: column;
+
+            }
+
+
+            .powerbi {
+
+                width: 100%;
+                height: 65%;
+
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+
+            }
+
+
+            .copilot {
+
+                width: 100%;
+                height: 35%;
+
+            }
+
+        }
+
+
+    </style>
 
 </head>
 
+
 <body>
 
-<div class="powerbi">
 
-<iframe
-src="https://app.powerbi.com/reportEmbed?reportId=2bf396ab-81aa-4b01-8d75-45e03090b7a9&autoAuth=true&ctid=5069cde4-642a-45c0-8094-d0c2dec10be3&navContentPaneEnabled=false&filterPaneEnabled=true&actionBarEnabled=false"
-allowfullscreen="true">
-</iframe>
+<div class="container">
+
+
+    <!-- ======================
+         POWER BI REPORT
+    ====================== -->
+
+    <div class="powerbi">
+
+
+        <iframe
+
+            src="https://app.powerbi.com/reportEmbed?reportId=8aba2aee-7589-4d95-9fa0-2e34103e403f&autoAuth=true&ctid=5069cde4-642a-45c0-8094-d0c2dec10be3"
+
+            allowfullscreen="true">
+
+        </iframe>
+
+
+    </div>
+
+
+
+    <!-- ======================
+         COPILOT STUDIO CHAT
+    ====================== -->
+
+    <div class="copilot">
+
+
+        <iframe
+
+            src="https://copilotstudio.microsoft.com/environments/733085cb-5a6a-e502-a9a3-82e04b1d5189/bots/cr81d_conversioncost_qtZxCE/webchat?__version__=2&enableFileAttachment=false&cliAgent=true&autoAuth=true&ctid=5069cde4-642a-45c0-8094-d0c2dec10be3"
+
+            allow="clipboard-read; clipboard-write">
+
+        </iframe>
+
+
+    </div>
+
 
 </div>
+
+
 
 </body>
 
